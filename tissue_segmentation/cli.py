@@ -14,7 +14,17 @@ def main():
     parser.add_argument("--model_input_size", type=int, default=500)
     parser.add_argument("--mask_threshold", type=float, default=0.6)
     args = parser.parse_args()
-    process_slide(args)
+
+    process_slide(
+        wsi_path=args.wsi_path,
+        onnx_model=args.onnx_model,
+        output_dir=args.output_dir,
+        thumbnail_patch_size=args.thumbnail_patch_size,
+        scale_factor=args.scale_factor,
+        tissue_threshold=args.tissue_threshold,
+        model_input_size=args.model_input_size,
+        mask_threshold=args.mask_threshold
+    )
 
 if __name__ == "__main__":
     main()
