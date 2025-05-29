@@ -39,3 +39,28 @@ To see all options:
 ## Example Output
 
 You will find a JSON file with patch positions, and a PNG image overlaying detected patches on the slide thumbnail.
+
+## Batch Processing: Process All Slides in a Folder
+
+You can easily process all slides in a folder (e.g., `WSIs/`) using a simple shell loop.
+Here’s an example command (for bash) that will run the CLI over every `.svs` and `.tif` file in the `WSIs` directory:
+
+    for slide in WSIs/*.{svs,tif}; do
+        python -m tissue_segmentation.cli \
+            --wsi_path "$slide" \
+            --onnx_model path/to/model.onnx \
+            --output_dir ./results
+    done
+
+- All results will be saved in the `./results` directory.
+- You can adjust the wildcard (`*.svs`, `*.tif`) for your file types.
+
+**Tip:**
+If you have only one file type (e.g., only `.svs`), you can simplify:
+
+    for slide in WSIs/*.svs; do
+        python -m tissue_segmentation.cli \
+            --wsi_path "$slide" \
+            --onnx_model path/to/model.onnx \
+            --output_dir ./results
+    done
