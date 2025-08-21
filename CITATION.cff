@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Oskouei"
+    given-names: "Soroush"
+    orcid: "https://orcid.org/0000-0003-1113-2634"
+title: "Super Fast Tissue Segmentor"
+version: 0.0.1
+date-released: 2025-08-21
+url: "https://github.com/SoroushOskouei/SuperFastTissueSegmentor"
