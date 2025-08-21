@@ -1,5 +1,5 @@
-numpy
-onnxruntime
-cucim
-opencv-python
-pillow
+numpy==1.24.4
+onnxruntime-gpu==1.14.1
+cucim==23.10.0
+opencv-python==4.11.0.86
+pillow==11.2.1
