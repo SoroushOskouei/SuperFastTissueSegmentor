@@ -64,3 +64,7 @@ If you have only one file type (e.g., only `.svs`), you can simplify:
             --onnx_model path/to/model.onnx \
             --output_dir ./results
     done
+
+
+## Acknowledgment
+The trained model is in part based upon open-access data from TCGA Research Network: https://www.cancer.gov/tcga.
